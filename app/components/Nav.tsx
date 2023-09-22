@@ -10,7 +10,7 @@ import menubar from "@/assets/menu.png";
 import Image from "next/image";
 
 
-const links = [
+export const links = [
     {
         id: "Timeline",
         url: "/#timeline"
@@ -29,6 +29,16 @@ const links = [
     },
 ]
 
+export const Logo = () => {
+    return (
+        <div className="logo">
+            <Link href={`/`}>
+                <h1 className="heading-text text-[2rem] font-bold">get<span className="text-primary ">linked</span></h1>
+            </Link>
+        </div>
+    )
+}
+
 const Nav = () => {
     const [ isToggled, setIsToggled ] = useState<boolean>(false);
     const query = usePathname();
@@ -40,11 +50,7 @@ const Nav = () => {
 
     return (
         <nav className={`${checkPath} pb-[1rem] pt-[1.7rem] md:pt-[3rem] cont flex justify-between items-center md:grid md:grid-cols-[45%_55%]`}>
-            <div className="logo">
-                <Link href={`/`}>
-                    <h1 className="heading-text text-[2rem] font-bold">get<span className="text-primary ">linked</span></h1>
-                </Link>
-            </div>
+            <Logo />
             <div className="links-register hidden md:flex justify-between items-center">
                 <div className="nav-links">
                     <ul className="flex gap-[2.6rem] items-center">
