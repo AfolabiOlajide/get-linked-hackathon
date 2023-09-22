@@ -11,7 +11,7 @@ import { Logo, links } from "./Nav";
 
 const Footer = () => {
     return (
-        <footer className="bg-[#100B20] backdrop-blur-[3rem]">
+        <footer className="bg-darker/5 backdrop-blur-[1rem] relative z-20">
             <div className="mx-auto w-[80%] md:w-[80%] pt-[4rem] pb-[2rem]">
                 <div className="top flex flex-col gap-[3rem] md:grid md:grid-cols-2">
                     <div className="left flex flex-col gap-3">

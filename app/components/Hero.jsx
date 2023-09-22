@@ -12,8 +12,8 @@ import Link from "next/link";
 
 const Hero = () => {
     return (
-        <div className="hero relative mb-1">
-            <div className="cover bg-dark/5 backdrop-blur-[7rem]">
+        <div className="hero relative">
+            <div className="cover">
                 {/* main */}
                 <div className="main cont">
                     <div className="hero-head w-max ml-auto pt-[2rem]">

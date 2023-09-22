@@ -2,12 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 .heading-text{
   font-family: ClashDisplay-Variable;
 }
 
 .bg-grad{
-  @apply bg-gradient-to-r from-primary to-secondary
+  @apply bg-gradient-to-r from-[#FE34B9] via-[#D434FE] to-[#903AFF]
 }
 
 .cont{
@@ -16,4 +20,8 @@
 
 .trans{
   @apply transition-all duration-300 ease-in-out;
+}
+
+.cover{
+  @apply bg-dark/5 backdrop-blur-[7rem];
 }
