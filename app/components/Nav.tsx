@@ -31,7 +31,7 @@ export const links = [
 
 export const Logo = () => {
     return (
-        <div className="logo">
+        <div className="logo w-max">
             <Link href={`/`}>
                 <h1 className="heading-text text-[2rem] font-bold">get<span className="text-primary ">linked</span></h1>
             </Link>
@@ -49,7 +49,7 @@ const Nav = () => {
     }
 
     return (
-        <nav className={`${checkPath} pb-[1rem] pt-[1.7rem] md:pt-[3rem] cont flex justify-between items-center md:grid md:grid-cols-[45%_55%]`}>
+        <nav className={`${checkPath} pb-[1rem] pt-[1.7rem] md:pt-[3rem] cont flex justify-between items-center md:grid md:grid-cols-[45%_55%] bg-dark/5 backdrop-blur-[7rem]`}>
             <Logo />
             <div className="links-register hidden md:flex justify-between items-center">
                 <div className="nav-links">
