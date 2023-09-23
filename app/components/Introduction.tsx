@@ -18,13 +18,13 @@ const Introduction = () => {
                         />
                     </div>
                     <div className="text text-center md:text-left mt-[2rem] md:mt-0">
-                        <h2 className="heading-text text-[2rem] font-bold mb-[1rem]">
+                        <h2 className="heading-text text-[1.2rem] md:text-[2rem] font-bold mb-[1rem]">
                             Introduction to getlinked <br />
                             <span className="text-primary">
                                 tech Hackathon 1.0
                             </span>
                         </h2>
-                        <p className="w-full md:w-[90%]">
+                        <p className="w-full md:w-[90%] mdtext-base">
                             Our tech hackathon is a melting pot of visionaries,
                             and its purpose is as clear as day: to shape the
                             future. Whether you're a coding genius, a design

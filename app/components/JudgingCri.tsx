@@ -8,10 +8,10 @@ const JudgingCri = () => {
     return (
         <div className="judging-criteria relative border-t-[1px] border-t-slate-500/50 ">
             <div className="cover py-[5rem]">
-                <div className="main cont py-[3rem] grid grid-cols-2 items-center ">
+                <div className="main cont py-[3rem] flex flex-col md:grid md:grid-cols-2 items-center ">
                     <div className="image">
                         <Image
-                            className="w-[80%]"
+                            className="w-[80%] mx-auto"
                             src={JudgingCriteria}
                             width={20}
                             height={20}
@@ -19,8 +19,8 @@ const JudgingCri = () => {
                             unoptimized
                         />
                     </div>
-                    <div className="text">
-                        <h2 className="heading-text text-[2rem] font-bold mb-[1rem]">
+                    <div className="text text-center">
+                        <h2 className="heading-text text-[1.2rem] md:text-[2rem] font-bold mb-[1rem]">
                             Judging Criteria <br />
                             <span className="text-primary">Key attributes</span>
                         </h2>
@@ -74,8 +74,8 @@ const JudgingCri = () => {
                     </div>
                 </div>
             </div>
-            <div className="design -z-40 absolute bottom-[10%] left-[5%] w-[25rem] h-[25rem] bg-purple-700/90 rounded-[50%]"></div>
-            <div className="design -z-40 absolute -bottom-[15%] right-[5%] w-[25rem] h-[25rem] bg-purple-700/90 rounded-[50%]"></div>
+            <div className="design -z-40 absolute md:bottom-[10%] top-[15%] left-[5%] w-[15rem] h-[15rem] md:w-[25rem] md:h-[25rem] bg-purple-700/90 rounded-[50%]"></div>
+            <div className="design -z-40 absolute md:-bottom-[15%] bottom-[10rem] right-[5%] w-[15rem] h-[15rem] md:w-[25rem] md:h-[25rem] bg-purple-700/90 rounded-[50%]"></div>
         </div>
     );
 };
