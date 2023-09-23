@@ -75,8 +75,8 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-            <div className="design -z-20 absolute -top-[6rem] left-[20%] w-[10rem] h-[10rem] md:w-[30rem] md:h-[30rem] bg-purple-500/40 rounded-[50%]"></div>
-            <div className="design -z-20 absolute top-[6rem] right-[10%] w-[25rem] h-[25rem] bg-purple-500/60 rounded-[50%]"></div>
+            <div className="design -z-20 absolute top-[10%] left-[5%] md:-top-[6rem] md:left-[20%] w-[10rem] h-[10rem] md:w-[30rem] md:h-[30rem] bg-secondary/90 md:bg-secondary/40 rounded-[50%]"></div>
+            <div className="design -z-20 hidden md:block absolute top-[6rem] right-[10%] w-[25rem] h-[25rem] bg-purple-500/60 rounded-[50%]"></div>
         </div>
     );
 };

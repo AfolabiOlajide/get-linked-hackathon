@@ -13,12 +13,12 @@ const FAQs = () => {
             <div className="cover">
                 <div className="cont py-[5rem] md:py-[12rem] flex flex-col md:grid md:grid-cols-2 items-center ">
                     <div className="text ">
-                        <h2 className="heading-text text-[2rem] font-bold mb-[1rem] text-center md:text-right">
+                        <h2 className="heading-text text-[2rem] font-bold mb-[1rem] text-center md:text-left">
                             Frequently Ask
                             <br />
                             <span className="text-primary">Question</span>
                         </h2>
-                        <p className="w-full md:w-[70%] mt-[2rem] text-center md:text-right">
+                        <p className="w-full md:w-[70%] mt-[2rem] text-center md:text-left">
                             We got answers to the questions that you might want
                             to ask about <span className="font-bold"> getlinked Hackathon 1.0</span>
                         </p>
