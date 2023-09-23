@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 // local imports
+import Question from "@/assets/question-mark.png"
 import FAQ from "@/assets/faq.png";
 import FaqComponent from "./FaqComponent";
 
@@ -24,10 +25,34 @@ const FAQs = () => {
                         </p>
                         <FaqComponent />
                     </div>
-                    <div className="image mt-[5rem] md:mt-0">
+                    <div className="image mt-[5rem] md:mt-0 relative">
                         <Image
                             className="w-[80%] mx-auto"
                             src={FAQ}
+                            width={20}
+                            height={20}
+                            alt="The Big Idea"
+                            unoptimized
+                        />
+                        <Image
+                            className="w-[1.5rem] md:w-[3rem] absolute -top-[5%] left-[15%] brightness-50"
+                            src={Question}
+                            width={20}
+                            height={20}
+                            alt="The Big Idea"
+                            unoptimized
+                        />
+                        <Image
+                            className="w-[1.5rem] md:w-[3rem] absolute -top-[10%] left-[35%]"
+                            src={Question}
+                            width={20}
+                            height={20}
+                            alt="The Big Idea"
+                            unoptimized
+                        />
+                        <Image
+                            className="w-[1.5rem] md:w-[3rem] absolute -top-[7%] left-[55%] brightness-50"
+                            src={Question}
                             width={20}
                             height={20}
                             alt="The Big Idea"
