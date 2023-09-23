@@ -1,12 +1,13 @@
 import Image from "next/image";
 
 // local imports
+import White from '@/assets/star_white.png'
 import Rules from "@/assets/rules-and-guidelines.png";
 
 const RulesGuidelines = () => {
     return (
         <div className="rules-and-guidelines relative border-t-[1px] border-t-slate-500/50 ">
-            <div className="cover">
+            <div className="cover relative">
                 <div className="cont py-[3rem] flex flex-col-reverse md:grid md:grid-cols-2 md:items-center">
                     <div className="text text-center md:text-left">
                         <h2 className="heading-text text-[1.2rem] md:text-[2rem] font-bold mb-[1rem]">
@@ -35,6 +36,8 @@ const RulesGuidelines = () => {
                         />
                     </div>
                 </div>
+                <Image className="absolute brightness-50 top-[60%] right-[5%] md:top-[30%] md:left-[25%] w-[1rem] md:w-[1.2rem]" src={White} width={20} alt="Star" />
+                <Image className="absolute top-[30%] left-[10%] md:top-[60%] md:left-[50%] w-[.8rem] md:w-[1.4rem]" src={White} width={20} alt="Star" />
             </div>
             <div className="design -z-40 absolute -top-[6rem] left-[20%] w-[15rem] h-[15rem] md:w-[30rem] md:h-[30rem] bg-purple-700/90 rounded-[50%]"></div>
             <div className="design -z-40 absolute top-[50%] -right-[16%] w-[15rem] h-[15rem] md:w-[30rem] md:h-[30rem] bg-purple-700/90 rounded-[50%]"></div>
