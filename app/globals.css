@@ -14,6 +14,11 @@ html {
     @apply bg-gradient-to-r from-[#FE34B9] via-[#D434FE] to-[#903AFF];
 }
 
+.bg-grad2 {
+    @apply bg-gradient-to-r from-[#D434FE] to-[#903AFF];
+}
+
+
 .cont {
     @apply mx-auto w-[90%] md:w-[80%];
 }
@@ -31,6 +36,8 @@ html {
 }
 
 .cubic-b{
-  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
 }
+
+
 
