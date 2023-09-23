@@ -2,30 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
-  scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-.heading-text{
-  font-family: ClashDisplay-Variable;
+.heading-text {
+    font-family: ClashDisplay-Variable;
 }
 
-.bg-grad{
-  @apply bg-gradient-to-r from-[#FE34B9] via-[#D434FE] to-[#903AFF]
+.bg-grad {
+    @apply bg-gradient-to-r from-[#FE34B9] via-[#D434FE] to-[#903AFF];
 }
 
-.cont{
-  @apply mx-auto w-[90%] md:w-[80%]
+.cont {
+    @apply mx-auto w-[90%] md:w-[80%];
 }
 
-.trans{
-  @apply transition-all duration-300 ease-in-out;
+.trans {
+    @apply transition-all duration-300 ease-in-out;
 }
 
-.cover{
-  @apply bg-dark/5 backdrop-blur-[7rem];
+.cover {
+    @apply bg-dark/5 backdrop-blur-[7rem];
 }
 
-.text-gradient{
-  @apply bg-clip-text bg-gradient-to-r from-[#FE34B9] via-[#D434FE] to-[#903AFF] text-transparent;
+.text-gradient {
+    @apply bg-clip-text bg-gradient-to-r from-[#FE34B9] via-[#D434FE] to-[#903AFF] text-transparent;
 }
+
+.cubic-b{
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+

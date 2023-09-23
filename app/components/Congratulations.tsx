@@ -9,7 +9,7 @@ import Image from 'next/image'
 import Button from './Button'
 
 
-const Congratulations = ({ success }: { success: boolean }) => {
+const Congratulations = ({ success, close }: { success: boolean, close: () => void }) => {
     const [mounted, setMounted] = useState<boolean>(false);
     
     let portal;
@@ -17,12 +17,12 @@ const Congratulations = ({ success }: { success: boolean }) => {
         portal = document.querySelector("#modal");
     }
 
-    const classes = success ? "fixed top-0 left-0 w-[100%] h-[100%] scale-[1]" : " scale-0"
+    const classes = success ? "fixed top-0 left-0 bottom-0 right-0" : " scale-0"
 
     useEffect(() => setMounted(true), []);
 
     return mounted ? ReactDOM.createPortal(
-        <div className={`modal-container fixed z-20 bg-dark/90 backdrop-blur-[rem] flex items-center justify-center ${classes}`}>
+        <div className={`modal-container trans cubic-b fixed z-20 bg-dark/90 backdrop-blur-[rem] flex items-center justify-center ${classes}`}>
             <div className="content border border-primary rounded-md p-[3rem] py-[5rem] h-[50vh] md:h-[70vh] w-[80%] md:w-[35%]">
                 <div className="image">
                     <Image className='w-[70%] mx-auto' src={Congrats} width={20} height={20} alt='Congratulations' unoptimized />
@@ -32,7 +32,7 @@ const Congratulations = ({ success }: { success: boolean }) => {
                     Yes, it was easy and you did it! check your mail box for next step
                     <Image className='w-[1.5] md:w-[2rem] pb-[.2rem]' src={Wink} width={20} height={20} alt='Winking Emoji' />
                     </p>
-                <Button text='Back' className='w-full mt-[2rem]'/>
+                <Button text='Back' className='w-full mt-[2rem]' onClick={close}/>
             </div>
         </div>
         , portal as HTMLElement

@@ -11,8 +11,12 @@ import WalkingWoman from "@/assets/walking-woman.png"
 import Congratulations from "@/app/components/Congratulations";
 
 const Register = () => {
-    const [ requestSuccessful, setRequestSuccessful ] = useState<boolean>(true);
+    const [ requestSuccessful, setRequestSuccessful ] = useState<boolean>(false);
     const mailRef = useRef<HTMLInputElement | null>(null);
+
+    function toogleModal(){
+        setRequestSuccessful(prev => !prev);
+    }
 
     return (
         <>
@@ -117,7 +121,7 @@ const Register = () => {
                                 I agreed with the event terms and conditions  and privacy policy
                             </div>
                             <div className="cta mt-[2rem] ">
-                                <Button text="Register Now" className="w-full"/>
+                                <Button text="Register Now" className="w-full" onClick={toogleModal}/>
                             </div>
                         </div>
                     </div>
@@ -125,7 +129,7 @@ const Register = () => {
                 <div className="design -z-40 absolute  top-[10%] left-0 md:top-[20%] md:left-[5%] w-[20rem] h-[20rem] md:w-[25rem] md:h-[25rem] bg-purple-700/90 rounded-[50%]"></div>
                 <div className="design -z-40 hidden md:block absolute bottom-[0%] right-[5%] w-[25rem] h-[25rem] bg-purple-700/90 rounded-[50%]"></div>
             </section>
-            <Congratulations success={requestSuccessful} />
+            <Congratulations success={requestSuccessful} close={toogleModal}/>
         </>
     );
 };
