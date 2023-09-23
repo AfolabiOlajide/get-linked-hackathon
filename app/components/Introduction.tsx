@@ -6,10 +6,10 @@ const Introduction = () => {
     return (
         <div id="overview" className="introduction relative z-10 border-t-[1px] border-t-slate-500/50">
             <div className="cover">
-                <div className="main cont py-[3rem] grid grid-cols-2 items-center ">
+                <div className="main cont py-[3rem] flex flex-col items-center md:grid md:grid-cols-2 md:items-center ">
                     <div className="image">
                         <Image
-                            className="w-[80%]"
+                            className="w-[80%] mx-auto"
                             src={BigIdea}
                             width={20}
                             height={20}
@@ -17,7 +17,7 @@ const Introduction = () => {
                             unoptimized
                         />
                     </div>
-                    <div className="text">
+                    <div className="text text-center md:text-left mt-[2rem] md:mt-0">
                         <h2 className="heading-text text-[2rem] font-bold mb-[1rem]">
                             Introduction to getlinked <br />
                             <span className="text-primary">

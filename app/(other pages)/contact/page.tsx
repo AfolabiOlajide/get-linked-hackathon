@@ -99,7 +99,7 @@ const Contact = () => {
                             <Button text="Submit" />
                         </div>
                     </div>
-                    <div className="close bg-grad w-max p-[.2rem] rounded-[50%] absolute top-[5%] left-[10%] cursor flex items-center justify-center" onClick={() => router.back()}>
+                    <div className="back md:hidden bg-grad w-max p-[.2rem] rounded-[50%] absolute top-[5%] left-[10%] cursor flex items-center justify-center" onClick={() => router.back()}>
                         <div className="ineer bg-dark rounded-[50%] p-[.6rem]">
                             <FaLessThan className="text-[.5rem]"/>
                         </div>
