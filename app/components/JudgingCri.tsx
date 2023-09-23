@@ -6,7 +6,7 @@ import Button from "./Button";
 
 const JudgingCri = () => {
     return (
-        <div className="judging-criteria relative mt-[0.1rem] ">
+        <div className="judging-criteria relative border-t-[1px] border-t-slate-500/50 ">
             <div className="cover py-[5rem]">
                 <div className="main cont py-[3rem] grid grid-cols-2 items-center ">
                     <div className="image">
