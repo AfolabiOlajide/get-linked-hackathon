@@ -7,12 +7,51 @@ import { FaLessThan } from "react-icons/fa";
 import { useRouter } from "next/navigation";
 
 // local imports
+import contactRoute from "@/lib/postContact";
 import Input from "@/app/components/Input";
 import Button from "@/app/components/Button";
+import { toast } from "react-toastify";
 
 const Contact = () => {
-    const mailRef = useRef<HTMLInputElement | null>(null);
     const router= useRouter();
+    const mailRef = useRef<HTMLInputElement | null>(null);
+    const phoneRef = useRef<HTMLInputElement | null>(null);
+    const nameRef = useRef<HTMLInputElement | null>(null);
+    const message = useRef<HTMLTextAreaElement | null>(null);
+
+    async function onContact(){
+        const data = {
+            email: mailRef.current?.value,
+            phone_number: phoneRef.current?.value,
+            first_name: nameRef.current?.value,
+            message: message.current?.value
+        }
+
+        const res = await contactRoute(data);
+        if(res.id){
+            toast.success('Your Request has been sent', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }else{
+            toast.error('Error Sending Request, Try Again', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }
+    }
 
     return (
         <section className="contact-page relative overflow-hidden">
@@ -80,23 +119,24 @@ const Contact = () => {
                         <Input
                             name="phone number"
                             type="tel"
-                            ref={mailRef}
+                            ref={phoneRef}
                             placeholder="Phone Number"
                         />
                         <Input
                             name="first name"
                             type="text"
-                            ref={mailRef}
+                            ref={nameRef}
                             placeholder="First Name"
                         />
                         <textarea
+                            ref={message}
                             className="outline-none bg-transparent border p-[.5rem] border-white/30 rounded-md focus:ring focus:ring-primary/60 w-full"
                             name="message"
                             placeholder="message"
                             rows={10}
                         ></textarea>
                         <div className="cta mt-[2rem] flex justify-center">
-                            <Button text="Submit" />
+                            <Button text="Submit" onClick={onContact}/>
                         </div>
                     </div>
                     <div className="back md:hidden bg-grad w-max p-[.2rem] rounded-[50%] absolute top-[5%] left-[10%] cursor flex items-center justify-center" onClick={() => router.back()}>

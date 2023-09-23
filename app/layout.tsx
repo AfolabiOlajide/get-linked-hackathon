@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 // local import
 import './globals.css';
@@ -22,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${montserrat.className} bg-dark text-white min-h-screen`}>
+        <ToastContainer />
         <div id="portal"></div>
         <div id="modal"></div>
         <Nav />
