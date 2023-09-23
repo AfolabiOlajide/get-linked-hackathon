@@ -43,7 +43,8 @@ export const Logo = () => {
 const Nav = () => {
     const [ isToggled, setIsToggled ] = useState<boolean>(false);
     const query = usePathname();
-    const checkPath = query === '/contact' || query === '/register' ? "hidden md:block" : "";
+    const check = query === '/contact' || query === '/register';
+    const checkPath = check ? "hidden md:block" : "";
 
     function handleToggleState(){
         setIsToggled(prev => !prev);
@@ -58,9 +59,9 @@ const Nav = () => {
                         <ul className="flex gap-[2.6rem] items-center">
                             {
                                 links.map(link => (
-                                    <li key={link.id}>
-                                    <Link href={`${link.url}`}>{link.id}</Link>
-                                </li>
+                                    <li key={link.id} className={`${check && link.id === "Contact" ? "text-gradient" : ""}`}>
+                                        <Link href={`${link.url}`}>{link.id}</Link>
+                                    </li>
                                 ))
                             }
                         </ul>

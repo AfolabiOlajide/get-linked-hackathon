@@ -23,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${montserrat.className} bg-dark text-white min-h-screen`}>
         <div id="portal"></div>
+        <div id="modal"></div>
         <Nav />
         <main>
           {children}
