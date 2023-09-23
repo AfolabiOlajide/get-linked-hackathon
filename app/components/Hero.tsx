@@ -12,7 +12,7 @@ import Link from "next/link";
 
 const Hero = () => {
     return (
-        <div className="hero relative">
+        <div className="hero relative border-t-[1px] border-t-slate-500/50 ">
             <div className="cover">
                 {/* main */}
                 <div className="main cont">

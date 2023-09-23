@@ -6,7 +6,6 @@ import './globals.css';
 import '../assets/WEB/css/clash-display.css';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import Divider from './components/Divider';
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -24,7 +23,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${montserrat.className} bg-dark text-white min-h-screen`}>
         <Nav />
-        <Divider />
         <main>
           {children}
         </main>

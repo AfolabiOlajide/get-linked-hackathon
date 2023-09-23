@@ -25,3 +25,7 @@ html{
 .cover{
   @apply bg-dark/5 backdrop-blur-[7rem];
 }
+
+.text-gradient{
+  @apply bg-clip-text bg-gradient-to-r from-[#FE34B9] via-[#D434FE] to-[#903AFF] text-transparent;
+}

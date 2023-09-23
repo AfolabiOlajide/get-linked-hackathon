@@ -74,7 +74,7 @@ const Nav = () => {
                 <Image className="w-[2rem]" src={menubar} width={20} height={20} alt={`menu icon`} unoptimized/> 
             </div>
             {/* mobile menu */}
-            <div className={`mobile-menu block md:hidden bg-dark absolute top-0 ${isToggled ? "right-0" : "right-[120%]"} w-[100%] bottom-0 pl-[3rem] pt-[10rem] trans`}>
+            <div className={`mobile-menu z-[99] block md:hidden bg-dark absolute top-0 ${isToggled ? "right-0" : "right-[120%]"} w-[100%] bottom-0 pl-[3rem] pt-[10rem] trans`}>
                 <div className="close bg-grad w-max p-[.2rem] rounded-[50%] absolute top-[5%] right-[10%] cursor flex items-center justify-center" onClick={handleToggleState}>
                     <div className="ineer bg-dark rounded-[50%] p-[.3rem]">
                         <AiOutlineClose className="text-[1rem]"/>

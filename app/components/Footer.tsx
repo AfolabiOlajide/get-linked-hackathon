@@ -3,15 +3,17 @@ import Link from "next/link";
 import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter, FaLocationDot } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
+import { usePathname } from "next/navigation";
 
 // other imports
-import { BsCheckLg } from "react-icons/bs";
-import { AiOutlinePlus } from "react-icons/ai";
 import { Logo, links } from "./Nav";
 
 const Footer = () => {
+    const query  = usePathname();
+    const check = query === "/contact" || query === "/register" ? "hidden" : "block"
+
     return (
-        <footer className="bg-darker/5 backdrop-blur-[1rem] relative z-20">
+        <footer className={`bg-dark/5 backdrop-blur-[7rem] relative ${check}`}>
             <div className="mx-auto w-[80%] md:w-[80%] pt-[4rem] pb-[2rem]">
                 <div className="top flex flex-col gap-[3rem] md:grid md:grid-cols-2">
                     <div className="left flex flex-col gap-3">

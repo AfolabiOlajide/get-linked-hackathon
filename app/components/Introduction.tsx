@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Introduction = () => {
     return (
-        <div id="overview" className="introduction relative z-10">
+        <div id="overview" className="introduction relative z-10 border-t-[1px] border-t-slate-500/50">
             <div className="cover">
                 <div className="main cont py-[3rem] grid grid-cols-2 items-center ">
                     <div className="image">
