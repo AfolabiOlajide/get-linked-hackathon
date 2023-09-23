@@ -5,6 +5,7 @@ import Link from "next/link";
 const unicaOne = Unica_One({ subsets: ["latin"], weight: ["400"] });
 
 // local imports
+import WhiteStar from "@/assets/star_white.png"
 import Chain from "@/assets/chain.png";
 import Spark from "@/assets/spark.png";
 import LightBulb from "@/assets/light-bulb.png"
@@ -16,7 +17,7 @@ import Button from "./Button";
 const Hero = () => {
     return (
         <div className="hero relative border-t-[1px] border-t-slate-500/50 ">
-            <div className="cover">
+            <div className="cover relative">
                 {/* main */}
                 <div className="main cont">
                     <div className="hero-head w-max ml-auto pt-[2rem] ">
@@ -138,6 +139,9 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
+                <Image className="absolute top-[10%] left-[30%] md:left-[10%]" src={WhiteStar} width={20} alt="White star" />
+                <Image className="absolute w-[.7rem] md:w-[1.5rem] brightness-50 top-[10%] right-[10%] md:top-[20%] md:left-[50%]" src={WhiteStar} width={10} alt="White star" />
+                <Image className="absolute w-[.7rem] md:w-[1.5rem] brightness-50 top-[45%] right-[20%] md:top-[70%] md:left-[40%]" src={WhiteStar} width={10} alt="White star" />
             </div>
             <div className="design -z-20 absolute top-[10%] left-[5%] md:-top-[6rem] md:left-[20%] w-[10rem] h-[10rem] md:w-[30rem] md:h-[30rem] bg-secondary/90 md:bg-secondary/40 rounded-[50%]"></div>
             <div className="design -z-20 hidden md:block absolute top-[6rem] right-[10%] w-[25rem] h-[25rem] bg-purple-500/60 rounded-[50%]"></div>
