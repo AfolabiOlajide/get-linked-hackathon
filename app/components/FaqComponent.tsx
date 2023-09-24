@@ -55,17 +55,17 @@ function FaqComponent() {
         };
 
     return (
-        <div className='mt-[6rem]'>
+        <div className='mt-[2rem] md:mt-[6rem]'>
             {/* faqs */}
             <div className="flex flex-col space-y-6">
                 { faqs.map((faq, i) => (
                     <div className="rounded-xl bg-dark shadow-lg shadow-teal/80" key={i}>
                         <div className={`question border-b border-b-primary ${faq.open ? "" : ""}  p-6 flex gap-4 justify-between items-center`}  >
-                            <h1 className="font-bold text-blu" onClick={() => toggleFAQ(i)}>{faq.question}</h1>
+                            <h1 className="font-bold text-[.8rem] md:text-base" onClick={() => toggleFAQ(i)}>{faq.question}</h1>
                             {faq.open ? <AiOutlineMinus className='text-primary cursor-pointer' onClick={() => toggleFAQ(i)} /> : <AiOutlinePlus className='text-primary cursor-pointer' onClick={() => toggleFAQ(i)}/>}
                         </div>
                         <div className={`answer ${faq.open? "block" : "hidden"} bg-lightTeal`}>
-                            <p className='text-slate-400 p-6'>{faq.answer}</p>
+                            <p className='text-slate-400 p-6 text-[.8rem] md:text-base'>{faq.answer}</p>
                         </div>
                     </div>
                 )) }

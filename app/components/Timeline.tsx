@@ -1,4 +1,8 @@
-import React from "react";
+import Image from 'next/image';
+
+// local imports
+import Secondary from '@/assets/star_secondary.png';
+import White from '@/assets/star_white.png';
 
 const Timeline = () => {
     return (
@@ -6,7 +10,7 @@ const Timeline = () => {
             id="timeline"
             className="timeline relative border-t-[1px] border-t-slate-500/50 "
         >
-            <div className="cover min-h-[40vh]">
+            <div className="cover min-h-[40vh] relative">
                 <div className="cont py-[4rem]">
                     <div className="heading text-center">
                         <h1 className="heading-text font-bold text-[2rem]">
@@ -216,6 +220,9 @@ const Timeline = () => {
                         </div>
                     </div>
                 </div>
+                <Image className="absolute top-[13%] md:top-[15%] left-[30%] w-[1rem] md:w-[1.5rem]" src={Secondary} width={20} alt="Star" />
+                <Image className="absolute top-[46%] right-[20%] md:top-[50%] md:right-[25%] w-[1rem] md:w-[1.5rem]" src={White} width={20} alt="Star" />
+                <Image className="absolute top-[95%] left-[5%] md:top-[90%] md:left-[20%] w-[1rem] md:w-[1.5rem] brightness-50" src={White} width={20} alt="Star" />
             </div>
         </div>
     );

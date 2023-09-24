@@ -1,6 +1,9 @@
 import Image from "next/image";
 
 // local imorts
+import Primary from '@/assets/star_primary.png';
+import Secondary from '@/assets/star_secondary.png';
+import White from '@/assets/star_white.png';
 import PrizesRewards from "@/assets/prize-and-reward.png";
 import Silver from "@/assets/silver_medal 1.png";
 import Gold from "@/assets/gold_medal 1.png";
@@ -9,7 +12,7 @@ import Bronze from "@/assets/bronze_medal 1.png";
 const Rewards = () => {
     return (
         <div className="rewards relative border-t-[1px] border-t-slate-500/50 ">
-            <div className="cover ">
+            <div className="cover relative">
                 <div className="main cont py-[4rem] flex flex-col md:grid md:grid-cols-[40%_60%] items-center ">
                     <div className="image hidden md:block">
                         <Image
@@ -79,6 +82,11 @@ const Rewards = () => {
                         </div>
                     </div>
                 </div>
+                <Image className="absolute top-[5%] md:top-[10%] left-[20%] w-[.7rem] md:w-[1.5rem]" src={Primary} width={20} alt="Star" />
+                <Image className="absolute -z-20 top-[13%] md:top-[22%] right-[30%] w-[.7rem] md:w-[1.5rem]" src={Primary} width={20} alt="Star" />
+                <Image className="absolute top-[60%] left-[20%] md:top-[30%] md:left-[45%] w-[.7rem] md:w-[1.5rem]" src={White} width={20} alt="Star" />
+                <Image className="absolute top-[70%] right-[15%] md:top-[50%] md:right-[15%] w-[.7rem] md:w-[1.5rem]" src={White} width={20} alt="Star" />
+                <Image className="absolute top-[95%] right-[25%] md:top-[95%] md:right-[25%] w-[.7rem] md:w-[1.5rem] brightness-50" src={White} width={20} alt="Star" />
             </div>
             <div className="design -z-40 absolute top-[15%] md:top-[20%] md:left-[20%] w-[10rem] h-[10rem] md:w-[20rem] md:h-[20rem] bg-secondary/90 rounded-[50%]"></div>
             <div className="design -z-40 absolute bottom-[15%] -right-[15%] w-[13rem] h-[13rem] md:w-[25rem] md:h-[25rem] bg-secondary/90 rounded-[50%]"></div>
